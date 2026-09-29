@@ -68,6 +68,46 @@ st.markdown(
         background: var(--canvas);
         color: var(--text);
     }
+    html, body, #root {
+        height: auto !important;
+        min-height: 100%;
+        overflow: visible !important;
+    }
+    body { min-height: 100vh; }
+    [data-testid="stScreencast"] {
+        height: auto !important;
+        min-height: 100vh;
+        overflow: visible !important;
+    }
+    [data-testid="stApp"] {
+        position: relative !important;
+        inset: auto !important;
+        height: auto !important;
+        min-height: 100vh;
+        overflow: visible !important;
+    }
+    [data-testid="stHeader"] {
+        position: relative !important;
+        inset: auto !important;
+        z-index: auto !important;
+        width: 100%;
+        height: auto !important;
+        min-height: 60px;
+    }
+    [data-testid="stAppViewContainer"] {
+        position: relative !important;
+        inset: auto !important;
+        height: auto !important;
+        min-height: 0;
+        overflow: visible !important;
+    }
+    [data-testid="stMain"] {
+        height: auto !important;
+        min-height: 0;
+        max-height: none !important;
+        overflow: visible !important;
+        flex: 1 0 auto;
+    }
     [data-testid="stAppViewContainer"] {
         background-image: linear-gradient(118deg, rgba(213, 243, 106, .035), transparent 32%);
     }
@@ -118,11 +158,11 @@ st.markdown(
         background: #2c2e25; border-color: var(--accent-deep); color: #ffffff;
     }
     .stButton > button[kind="primary"], [data-testid="stFormSubmitButton"] button[kind="primary"] {
-        min-height: 50px; background: var(--accent); border-color: var(--accent); color: #11120f;
+        min-height: 50px; background: #1b1d1a; border-color: var(--accent-deep); color: #ffffff;
         font-size: .96rem; font-weight: 750;
     }
     .stButton > button[kind="primary"]:hover,
-    [data-testid="stFormSubmitButton"] button[kind="primary"]:hover { background: #e0f98a; border-color: #e0f98a; color: #11120f; }
+    [data-testid="stFormSubmitButton"] button[kind="primary"]:hover { background: #242820; border-color: var(--accent); color: #ffffff; }
     .stButton > button:focus-visible,
     [data-testid="stFormSubmitButton"] button:focus-visible,
     [data-testid="stSidebar"] [data-testid="stRadioOption"]:focus-within > div {
